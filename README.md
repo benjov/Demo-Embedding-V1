@@ -46,21 +46,6 @@ contundentes en la junta:
 | **C** | Partes relacionadas: 3 CFDIs idénticos y vagos al mismo receptor | $8.7M | Alta |
 | **D** | CSF desactualizada: $14.3M en actividades eléctrica y obra civil no declaradas | $14.3M | Alta |
 
----
-
-## Cómo correrla
-
-```bash
-cd demo_repse
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Se abre en `http://localhost:8501`.
-
----
 
 ## Guion sugerido para la junta (15 min)
 
@@ -100,21 +85,6 @@ Bonus rápido. Demuestra la extensibilidad del método.
 
 **Minuto 14–15 · Preguntas + siguientes pasos**
 
----
-
-## Antes de la junta — checklist
-
-- [ ] **Rotar las API keys** del notebook original (OpenAI y LandingAI
-  estaban en texto plano).
-- [ ] Limpiar el parche temporal de la celda 46 del .ipynb.
-- [ ] Probar la app en el monitor/proyector real. Las figuras 3D
-  requieren un poco de demo-reel previo (rotar la cámara suave).
-- [ ] Tener el notebook original abierto en un segundo monitor para
-  clientes técnicos que pregunten "¿cómo lo haces?".
-- [ ] Preparar una respuesta para: "¿y el costo por empresa analizada?"
-  (estimación: ~$0.50 USD en APIs + <5 min de compute).
-
----
 
 ## Estructura del proyecto
 
