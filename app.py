@@ -3,21 +3,6 @@
  analítica boutique · demo
  análisis semántico de riesgo fiscal y regulatorio
 =====================================================================
-
-Aplicación Streamlit para presentación a potenciales clientes.
-Envuelve el pipeline del notebook de embeddings + PCA + convex hull
-en una narrativa de 5 casos de aplicación.
-
-Identidad visual: manual corporativo de Analítica Boutique
- · azul corporativo   #3C4981  (Pantone 280 U)
- · naranja acento     #EE7F4B  (Pantone 158 U, "el punto")
- · títulos            Century Gothic
- · cuerpo             Calibri
-
-Uso:
-    pip install -r requirements.txt
-    streamlit run app.py
----------------------------------------------------------------------
 """
 
 import streamlit as st
@@ -53,16 +38,16 @@ inject_css()
 with st.sidebar:
     # Logo SVG de la marca (reproducción del manual)
     st.markdown(LOGO_SVG, unsafe_allow_html=True)
-    st.markdown('<p class="ab-tagline">basando decisiones<br/>en el análisis de datos</p>',
+    st.markdown('<p class="ab-tagline">Precisión analítica,<br/>visión estratégica</p>',
                 unsafe_allow_html=True)
 
     st.markdown('<hr class="ab-hr"/>', unsafe_allow_html=True)
 
-    st.markdown('<p class="ab-sidebar-label">caso de estudio</p>',
+    st.markdown('<p class="ab-sidebar-label">Caso de estudio</p>',
                 unsafe_allow_html=True)
     st.markdown('<p class="ab-sidebar-value">MetalTécnica del Centro, S.A. de C.V.</p>'
-                '<p class="ab-sidebar-muted">Industria metal-mecánica &middot; '
-                'Acta constitutiva &middot; CSF &middot; 94,312 CFDIs</p>',
+                '<p class="ab-sidebar-muted">Industria metal-mecánica<br/>'
+                'Acta constitutiva · CSF · +94,000 CFDIs</p>',
                 unsafe_allow_html=True)
 
     st.markdown('<hr class="ab-hr"/>', unsafe_allow_html=True)
@@ -70,12 +55,12 @@ with st.sidebar:
     st.markdown('<p class="ab-sidebar-label">recorrido</p>', unsafe_allow_html=True)
     st.markdown(
         '<ol class="ab-toc">'
-        '<li>visión general</li>'
-        '<li>riesgo repse</li>'
-        '<li>objeto social vs. cfdi</li>'
-        '<li>kyc de proveedores</li>'
-        '<li>auditoría asistida</li>'
-        '<li>clasificación sat</li>'
+        '<li>Visión general</li>'
+        '<li>Riesgo REPSE</li>'
+        '<li>Objeto social vs. CFDI</li>'
+        '<li>KYC de proveedores</li>'
+        '<li>Auditoría asistida</li>'
+        '<li>Clasificación SAT</li>'
         '</ol>', unsafe_allow_html=True)
 
     st.markdown('<hr class="ab-hr"/>', unsafe_allow_html=True)
@@ -83,7 +68,7 @@ with st.sidebar:
     st.markdown(
         '<p class="ab-sidebar-muted">'
         'pipeline técnico:<br/>'
-        'LandingAI ADE · GPT-4.1 ·<br/>OpenAI Embeddings · PCA 3D · Convex Hull'
+        'OCR · GPT-4.1 · OpenAI Embeddings · <br/>PCA 3D · Convex Hull'
         '</p>',
         unsafe_allow_html=True,
     )
@@ -100,15 +85,15 @@ data = load_data()
 # --------------------------------------------------------------------
 st.markdown(
     '<h1 class="ab-h1">'
-    'an<span class="ab-dot-letter">á<span class="ab-dot">●</span></span>lisis semántico '
-    'de riesgo fiscal y regulatorio'
+    'Precisión analítica aplicada al riesgo fiscal'
     '</h1>',
     unsafe_allow_html=True,
 )
 st.markdown(
     '<p class="ab-subtitle">'
-    'cómo convertir actas constitutivas, constancias fiscales y facturas '
-    'electrónicas en un mapa de riesgo interpretable.'
+    'Convertimos actas constitutivas, Constancias se Situación Fiscal (CSF) y facturas '
+    'electrónicas en un mapa de riesgo interpretable — <b>transformando '
+    'información compleja en ventajas competitivas tangibles y medibles</b>.'
     '</p>',
     unsafe_allow_html=True,
 )
@@ -117,12 +102,12 @@ st.markdown(
 # TABS
 # --------------------------------------------------------------------
 tabs = st.tabs([
-    "visión general",
-    "① riesgo repse",
-    "② objeto social vs. cfdi",
-    "③ kyc de proveedores",
-    "④ auditoría asistida",
-    "⑤ clasificación sat",
+    "Visión general",
+    "Riesgo REPSE",
+    "Objeto social vs. CFDI",
+    "KYC de proveedores",
+    "Auditoría asistida",
+    "Clasificación SAT",
 ])
 
 with tabs[0]:
@@ -144,9 +129,8 @@ with tabs[5]:
 # --------------------------------------------------------------------
 st.markdown(
     '<div class="ab-footer">'
-    '<span class="ab-dot">●</span>&nbsp;'
-    'demo interno &middot; los datos mostrados son ficticios y se presentan '
-    'con fines ilustrativos. la empresa "MetalTécnica del Centro" no existe; '
+    'Demo interno · Los datos mostrados son ficticios y se presentan '
+    'con fines ilustrativos. La empresa "MetalTécnica del Centro" no existe; '
     'cualquier similitud con una organización real es coincidencia.'
     '</div>',
     unsafe_allow_html=True,
