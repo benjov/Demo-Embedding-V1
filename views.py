@@ -520,7 +520,7 @@ def view_auditoria(data):
         }.get(v, "")
 
     st.dataframe(
-        findings.style.applymap(_color, subset=["Severidad"]),
+        findings.style.map(_color, subset=["Severidad"]),
         hide_index=True, use_container_width=True,
     )
 
