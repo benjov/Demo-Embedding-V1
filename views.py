@@ -194,11 +194,11 @@ def view_overview(data):
     """)
 
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Catálogos de \nreferencia", f"{len(data.df_catalogos):,}")
+    c1.metric("Cat. de referencia", f"{len(data.df_catalogos):,}")
     c2.metric("Puntos del caso", f"{len(data.df_caso):,}")
-    c3.metric("Distancia máxima \nuniverso",
+    c3.metric("Distancia máxima",
               f"{data.key_findings['distancia_max_universo']:.3f}")
-    c4.metric("Hallazgos de \nriesgo", "4")
+    c4.metric("Hallazgos de riesgo", "4")
 
     ab_section("El mapa completo")
     st.markdown(
